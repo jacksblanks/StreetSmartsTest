@@ -15,6 +15,8 @@ public class BallSpawner : MonoBehaviour
     public float ZBoundsRangeMax;
     public float StartingYPosition;
 
+    public GameObject BallPrefab;
+
     private void Start()
     {
         for (var i = 0; i< NumBallsToSpawn; i++)
@@ -23,7 +25,7 @@ public class BallSpawner : MonoBehaviour
 
     public void SpawnNewBall()
     {
-        var newBall = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+        var newBall = GameObject.Instantiate(BallPrefab);
         newBall.transform.parent = transform;
         newBall.transform.position = new Vector3(Random.Range(XBoundsRangeMin, XBoundsRangeMax), StartingYPosition, Random.Range(ZBoundsRangeMin, ZBoundsRangeMax));
     }
