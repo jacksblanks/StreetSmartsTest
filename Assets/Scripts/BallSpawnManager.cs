@@ -19,6 +19,7 @@ public class BallSpawnManager : MonoBehaviour
     private readonly List<Vector3> _ballPositions = new List<Vector3>();
     private int _ballCount;
     private float _minBallSeparation = 1f;
+    private float _minBallCollectionSeparation = 2f;
 
     private Vector3 RandomBallPosition => new Vector3(Random.Range(XBoundsRangeMin, XBoundsRangeMax), StartingYPosition,
         Random.Range(ZBoundsRangeMin, ZBoundsRangeMax));
@@ -47,7 +48,7 @@ public class BallSpawnManager : MonoBehaviour
     // Might be because the collision detection doesn't work when there all instantiated at the same time?
     private bool BallProximityCheck(Vector3 checkPosition)
     {
-        if (Vector3.Distance(checkPosition, Vector3.zero) < _minBallSeparation)
+        if (Vector3.Distance(checkPosition, Vector3.zero) < _minBallCollectionSeparation)
             return false;
 
         if (_ballPositions.Count == 0)
