@@ -45,7 +45,7 @@ public class MouseInputGrabber : MonoBehaviour
  
             RaycastHit hit;
             
-            if (Physics.Raycast (ray, out hit, GroundLayerMask) && hit.collider.gameObject.name == "Plane")
+            if (Physics.Raycast (ray, out hit, Mathf.Infinity, GroundLayerMask))
             {
                 var targetPos = new Vector3(hit.point.x, HoldingYPosition, hit.point.z);
                 _trackedObject.position = Vector3.Lerp(_trackedObject.position, targetPos, FollowSpeed*Time.deltaTime);

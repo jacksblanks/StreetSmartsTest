@@ -671,7 +671,7 @@ GameObject:
   - component: {fileID: 1020692999}
   - component: {fileID: 1020692998}
   m_Layer: 5
-  m_Name: Text
+  m_Name: BallCollectedText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -797,5 +797,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03a03168a62af184db6a02bd14fdbbf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FollowSpeed: 1
+  FollowSpeed: 10
   HoldingYPosition: 0.5
