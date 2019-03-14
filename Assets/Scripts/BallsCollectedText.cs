@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Gets event from Ball Counter and updates the corresponding UI text.
+/// </summary>
 public class BallsCollectedText : MonoBehaviour
 {
 

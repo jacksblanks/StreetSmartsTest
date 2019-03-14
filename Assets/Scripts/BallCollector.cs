@@ -1,7 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
+/// <summary>
+/// Class for ball collector, destroys balls and broadcasts event.
+/// </summary>
 public class BallCollector : MonoBehaviour
 {
     public delegate void BallCollected();

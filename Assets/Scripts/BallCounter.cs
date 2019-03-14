@@ -1,5 +1,8 @@
 ﻿using UnityEngine;
 
+/// <summary>
+/// Gets event from Ball Collector to keep track of num of balls collected.
+/// </summary>
 public class BallCounter : MonoBehaviour
 {
     private int _ballsCollected;
